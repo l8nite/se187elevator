@@ -2,14 +2,5 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="C:/Users/param/Desktop/CMPE_New_Project_287/elevator_Version 0/Jars/Door.jar"/>
-	<classpathentry kind="lib" path="C:/Users/param/Desktop/CMPE_New_Project_287/elevator_Version 0/Jars/DoorPanel.jar"/>
-	<classpathentry kind="lib" path="C:/Users/param/Desktop/CMPE_New_Project_287/elevator_Version 0/Jars/FloorPanelQueue.jar"/>
-	<classpathentry kind="lib" path="C:/Users/param/Desktop/CMPE_New_Project_287/elevator_Version 0/Jars/UserPanelQueue.jar"/>
-	<classpathentry kind="lib" path="C:/Users/param/Desktop/New_Jars_Elevator_version_1/Userpanel_v2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/param/Desktop/New_Jars_Elevator_version_1/CarController_v1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/param/Desktop/New_Jars_Elevator_version_1/FloorPanel_v3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/param/Desktop/New_Jars_Elevator_version_1/MetaController_v1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/param/Desktop/Car_v4_algo.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

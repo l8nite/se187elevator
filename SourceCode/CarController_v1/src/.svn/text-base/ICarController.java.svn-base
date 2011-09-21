@@ -1,7 +1,0 @@
-
-public interface ICarController {
-
-	void processRequest(int floorNumber, Direction direction);
-		void setcar(ICar icar);
-		void setDoorPanel(IDoorPanel doorPanel);
-}

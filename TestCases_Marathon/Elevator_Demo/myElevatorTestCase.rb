@@ -30,7 +30,18 @@ def test
         sleep(20);
         assert_p("UpButton", "Background", "[r=0,g=255,b=0]")
         sleep(10);
-        assert_p("JTextField_102", "Text", "IDLE")      
+        assert_p("JTextField_102", "Text", "IDLE") 
+        sleep(5)
+        click("3")  # clicking userpanel 3
+        assert_p("3", "Background", "[r=0,g=0,b=255]")
+        sleep(7);
+        assert_p("textStatus", "Text", "MOVING_UP")  
+        sleep(10);
+        assert_p("3", "Background", "[r=0,g=255,b=0]")
+        sleep(15)
+        assert_p("textStatus", "Text", "IDLE") 
+
+        
     }
 }
 end

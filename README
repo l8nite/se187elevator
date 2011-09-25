@@ -1,0 +1,16 @@
+To build this project, you will need gradle:
+    http://gradle.org/
+
+
+To build the source:
+
+    $ cd se187elevator
+    $ gradle build
+    $ gradle uploadArchives
+
+The unit tests will run automatically as part of the build stage
+
+
+To run the Elevator simulator:
+
+    $ java -jar Jars/AdminConsole-1.0.jar

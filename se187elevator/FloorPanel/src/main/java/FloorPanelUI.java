@@ -35,7 +35,6 @@ public class FloorPanelUI extends JPanel {
 		JLabel label = new JLabel("FloorNumber "+CurrentFloorNumber);
 		add(label);
 		
-		//Pinky added
 		JLabel floorInd1= new JLabel("Car ID");
 		add(floorInd1);
 		floorInd2 = new JTextField(1);

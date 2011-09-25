@@ -24,13 +24,10 @@ public class Car implements ICar {
 	
 	Thread carThread = null;
 	
-	//Pinky Code Added
 	int carID;
-	//static int id=0;
 	
 	
 	public Car() {
-		//this.carID=++Car.id;
 		carRunnable = new CarRunnable();
 		carThread = new Thread(carRunnable);
 	}

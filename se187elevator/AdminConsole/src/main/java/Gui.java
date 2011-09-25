@@ -161,7 +161,6 @@ public class Gui extends javax.swing.JFrame {
         		//jComboBox2.actionPerformed(evt);        		
         	}
         });
-        //Pinky add
         /*JFrame frame = new JFrame("Selecting");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
@@ -228,7 +227,6 @@ public class Gui extends javax.swing.JFrame {
             }
         });
         
-        //Pinky added
         
         /*String numCars = (String)jComboBox2.getSelectedItem();
 		int numbCar=Integer.parseInt(numCars);

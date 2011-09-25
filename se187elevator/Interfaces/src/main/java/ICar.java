@@ -37,8 +37,9 @@ public interface ICar {
 
 	IDoor getDoor();
 	
-	//Pinky added
 	void setCarID(int id);
+
 	int getCarID();
+
 	String getCarType();
 }

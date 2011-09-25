@@ -107,4 +107,17 @@ public class TestCar implements ICar {
 		
 	}
 
+    @Override
+    public String getCarType() {
+        return "Test";
+    }
+
+    @Override
+    public int getCarID() {
+        return -1;
+    }
+
+    @Override
+    public void setCarID(int id) {
+    }
 }

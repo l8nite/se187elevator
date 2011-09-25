@@ -220,7 +220,7 @@ public class Gui extends javax.swing.JFrame {
              
         jLabel11.setText("Algorithm Type");
 
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Shortest Path", "Random" }));
+        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Shortest Path", "Random", "Highest Floor First" }));
         jComboBox10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox10ActionPerformed(evt);

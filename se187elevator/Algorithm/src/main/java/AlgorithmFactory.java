@@ -8,7 +8,9 @@ public class AlgorithmFactory {
 			algorithm = new ShortestPathAlgorithm();
 		}else if(AlgorithmConfiguration.getAlgorithm().equalsIgnoreCase("leastTasks")){
 			algorithm = new LeastTasksAlgorithm();
-		}
+		}else if(AlgorithmConfiguration.getAlgorithm().equalsIgnoreCase("highestFloorFirst")){
+            algorithm = new HighestFloorFirstAlgorithm();
+        }
 		
 		return algorithm;
 	}

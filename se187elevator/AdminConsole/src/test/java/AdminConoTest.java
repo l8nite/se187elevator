@@ -72,9 +72,11 @@ public class AdminConoTest extends  TestCase{
 	public void testAlgorithmType(){
 		GuiConfiguration.setAlgorithmType("shortestPath");
 		AlgorithmConfiguration.setAlgorithm(GuiConfiguration.getAlgorithmType());
-		
 		assertEquals(AlgorithmConfiguration.getAlgorithm(),"shortestPath");		
-		
+
+        GuiConfiguration.setAlgorithmType("highestFloorFirst");
+        AlgorithmConfiguration.setAlgorithm(GuiConfiguration.getAlgorithmType());
+        assertEquals(AlgorithmConfiguration.getAlgorithm(), "highestFloorFirst");
 	}
 	public void testButtonColor_Floor(){
 		FloorPanelColor testButtonColor = FloorPanelColor.YELLOW;

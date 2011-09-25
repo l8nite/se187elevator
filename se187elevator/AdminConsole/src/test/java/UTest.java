@@ -16,13 +16,13 @@ public class UTest extends TestCase{
 		@Before
 		public void setUp() throws Exception
 		{	
+            UserPanelConfiguration.setUserPanelType("default");
 			UserPanelConfiguration.setActiveButtonColor(UserPanelColor.BLUE);
 			UserPanelConfiguration.setButtonColor(UserPanelColor.GREEN);
 			UserPanelConfiguration.setSelection(1);
 			UserPanelConfiguration.setNumberFloors(6);
 			ui=UserPanelFactory.getUserPanelInstance();
 			ui.setCar(new Car());		
-			
 		}
 
 		@After

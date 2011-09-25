@@ -56,7 +56,7 @@ public class ShortestPathAlgorithm implements IAlgorithm {
 	
 		
 	//}
-	private List<ICar> partitionCars(List<ICar> lstCars, int destinationFloorNumber) {
+	public List<ICar> partitionCars(List<ICar> lstCars, int destinationFloorNumber) {
 		// TODO Auto-generated method stub
 		
 		ArrayList<ICar> oddCars=new ArrayList<ICar>();

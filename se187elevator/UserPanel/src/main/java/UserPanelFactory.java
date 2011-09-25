@@ -6,17 +6,18 @@ public class UserPanelFactory {
 		
 		 ICar car = null;
 		 
+        userPanel = new UserPanel();
+
 		if(UserPanelConfiguration.getUserPanelType().equals("default"))
-		userPanel = new UserPanel();
-		
-		userPanel.setNumberFloors(UserPanelConfiguration.getNumberFloors());	
-		
-		 userPanel.setButtonColor(UserPanelConfiguration.getButtonColor());
-		 
-		 userPanel.setActiveButtonColor(UserPanelConfiguration.getActiveButtonColor());
-		 userPanel.setSelection(UserPanelConfiguration.getSelection());
-		 
-		 	 
+        {
+            userPanel.setNumberFloors(UserPanelConfiguration.getNumberFloors());	
+            
+            userPanel.setButtonColor(UserPanelConfiguration.getButtonColor());
+            
+            userPanel.setActiveButtonColor(UserPanelConfiguration.getActiveButtonColor());
+            userPanel.setSelection(UserPanelConfiguration.getSelection());
+        } 
+                
 		if(UserPanelConfiguration.getCarType().equals("default")){
 			car = new Car();
 			

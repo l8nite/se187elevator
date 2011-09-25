@@ -10,7 +10,7 @@ public class TestUserPanelconfiguration extends TestCase{
 	
 	public void testUserPanelTypeEven(){
 		UserPanelConfiguration.setUserPanelType("Even");
-       assertEquals(UserPanelConfiguration.getUserPanelType(),"odd");
+       assertEquals(UserPanelConfiguration.getUserPanelType(),"Even");
 }
 
 public void testUserPanelTypeOdd(){
@@ -20,7 +20,7 @@ public void testUserPanelTypeOdd(){
 
 public void testUserPanelTypeCurrent(){
 	UserPanelConfiguration.setUserPanelType("Current");
-	assertEquals(UserPanelConfiguration.getUserPanelType(),"ODD");
+	assertEquals(UserPanelConfiguration.getUserPanelType(),"Current");
 	}
 
  public void testCarType(){

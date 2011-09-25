@@ -11,6 +11,16 @@ configure(subprojects.findAll {
     dependencies {
         compile project(':Shared'), project(':Interfaces')
     }
+
+    repositories {
+        mavenCentral()
+    }
+
+    uploadArchives {
+        repositories {
+            flatDir(dirs: file("$rootProject.projectDir/Jars"))
+        }
+    }
 }
 
 project(':Interfaces') {
@@ -24,10 +34,11 @@ project(':AdminConsole') {
         manifest {
             attributes 'Main-Class': 'Gui'
         }
-
+/*
         from { configurations.compile.collect {
             it.isDirectory() ? it : zipTree(it)
         } }
+*/
     }
 
     dependencies {
@@ -37,6 +48,8 @@ project(':AdminConsole') {
         compile project(':FloorPanel')
         compile project(':MetaController')
         compile project(':UserPanel')
+        
+        testCompile group: 'junit', name: 'junit', version: '4.+'
     }
 }
 

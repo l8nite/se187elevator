@@ -471,10 +471,9 @@ public class Gui extends javax.swing.JFrame {
 			JFrame AboutFrame = new JFrame("Authors");
 			AboutFrame.setVisible(true);
 			AboutFrame.setSize(200,150);
-			JLabel label = new JLabel("Aarthi Varadarajan");
-			JLabel label1 = new JLabel("Jahnavi Athuluru ");
-			JLabel label2 = new JLabel("Sandhya Rajagopalan");
-			//System.out.println("hiiiiiii");
+			JLabel label = new JLabel("Shaun Guth");
+			JLabel label1 = new JLabel("Frode Bjerke");
+			JLabel label2 = new JLabel("Ash Islam");
 			
 			JPanel panel = new JPanel();
 			AboutFrame.add(panel);

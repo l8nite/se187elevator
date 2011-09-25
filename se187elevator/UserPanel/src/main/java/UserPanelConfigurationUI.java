@@ -29,9 +29,9 @@ public class UserPanelConfigurationUI  extends JPanel{
 	 JComboBox list6 = new JComboBox(new String[]{"Current", "Even","Odd"});
 	 
 	 
-	 Main owner = null;
+	 IUserPanelOwner owner = null;
 	
-	public UserPanelConfigurationUI(Main owner){
+	public UserPanelConfigurationUI(IUserPanelOwner owner){
 		this.owner = owner;
 		setLayout(new GridBagLayout());
 		
@@ -99,8 +99,8 @@ public class UserPanelConfigurationUI  extends JPanel{
 	private class InitialAction implements ActionListener 
 	   {
 		
-		Main appUI = null;
-	       public  InitialAction(Main owner){
+		IUserPanelOwner appUI = null;
+	       public  InitialAction(IUserPanelOwner owner){
 	    	   appUI = owner;
 	       }
 

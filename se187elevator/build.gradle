@@ -1,7 +1,5 @@
 dependsOnChildren()
 
-defaultTasks 'compileJava'
-
 subprojects {
     apply plugin: 'java'
     version = '1.0'
@@ -21,37 +19,64 @@ project(':Interfaces') {
     }
 }
 
-// TODO: This should really be an interface relationship
-project(':Algorithm') {
+project(':AdminConsole') {
+    jar {
+        manifest {
+            attributes 'Main-Class': 'Gui'
+        }
+
+        from { configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        } }
+    }
+
     dependencies {
         compile project(':Car')
-    }
-}
-
-project(':Car') {
-    repositories {
-        flatDir name: 'External', dirs: "$rootProject.projectDir/External"
-    }
-
-    dependencies {
-        compile 'com.jgoodies:jgoodies-forms:1.4.2'
-        compile project(':CarController')
         compile project(':Door')
+        compile project(':DoorPanel')
+        compile project(':FloorPanel')
+        compile project(':MetaController')
         compile project(':UserPanel')
     }
 }
 
-project(':UserPanel') {
-    sourceSets {
-        main {
-            java {
-                include "$rootProject.projectDir/Car/src/main/java/Car.java"
-                include "$rootProject.projectDir/Car/src/main/java/CarUI.java"
-            }
-        }
+project(':Algorithm') {
+    dependencies {
+        compile project(':Car')
+        compile project(':UserPanel')
+        compile project(':UserPanelQueue')
     }
+}
 
+project(':Car') {
+    dependencies {
+        compile files("$rootProject.projectDir/External/jgoodies-forms-1.4.2.jar")
+        compile project(':CarController')
+    }
+}
+
+project(':DoorPanel') {
+    dependencies {
+        compile project(':Car')
+        compile project(':Door')
+    }
+}
+
+project(':FloorPanel') {
+    dependencies {
+        compile project(':FloorPanelQueue')
+    }
+}
+
+project(':MetaController') {
+    dependencies {
+        compile project(':Algorithm')
+    }
+}
+
+project(':UserPanel') {
     dependencies {
         compile project(':UserPanelQueue')
+        compile project(':Car')
     }
 }

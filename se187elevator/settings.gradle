@@ -1,4 +1,4 @@
-//include 'AdminConsole'
+include 'AdminConsole'
 include 'Algorithm'
 include 'Car', 'CarController'
 include 'Door', 'DoorPanel'

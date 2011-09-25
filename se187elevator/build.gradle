@@ -34,11 +34,6 @@ project(':AdminConsole') {
         manifest {
             attributes 'Main-Class': 'Gui'
         }
-/*
-        from { configurations.compile.collect {
-            it.isDirectory() ? it : zipTree(it)
-        } }
-*/
     }
 
     dependencies {

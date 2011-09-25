@@ -37,19 +37,12 @@ public class UserPanelQueue implements IUserPanelQueue {
 				System.out.println("Request Queued Successfully in downQueue "+destinationFloorNo);
 			}
 		}
-		System.out.println("Hellloooo.....sorting");
 		if (queueUserPanelRequestUp.size() != 0) {
 			Collections.sort(queueUserPanelRequestUp,UserPanelQueue.ASC_COMPARATOR);
 		}
 		if (queueUserPanelRequestDown.size() != 0) {
 			Collections.sort(queueUserPanelRequestDown,UserPanelQueue.DESC_COMPARATOR);
 		}
-		
-		
-		for( UserPanelRequest u : queueUserPanelRequestUp){
-			System.out.println("sandhyaaaaa" + u.getDestinationFloorNumber());
-		}
-
 	}
 
 	private boolean isRequestAlreadyQueued(UserPanelRequest userPanelRequest) {

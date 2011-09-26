@@ -3,14 +3,6 @@ dependsOnChildren()
 subprojects {
     apply plugin: 'java'
     version = '1.0'
-}
-    
-configure(subprojects.findAll {
-    it.name != 'Shared' && it.name != 'Interfaces'
-}) {
-    dependencies {
-        compile project(':Shared'), project(':Interfaces')
-    }
 
     repositories {
         mavenCentral()
@@ -22,6 +14,14 @@ configure(subprojects.findAll {
         }
     }
 }
+    
+configure(subprojects.findAll {
+    it.name != 'Shared' && it.name != 'Interfaces'
+}) {
+    dependencies {
+        compile project(':Shared'), project(':Interfaces')
+    }
+}
 
 project(':Interfaces') {
     dependencies {
@@ -30,11 +30,7 @@ project(':Interfaces') {
 }
 
 project(':AdminConsole') {
-    jar {
-        manifest {
-            attributes 'Main-Class': 'Gui'
-        }
-    }
+    apply plugin: 'java'
 
     dependencies {
         compile project(':Car')
@@ -43,9 +39,21 @@ project(':AdminConsole') {
         compile project(':FloorPanel')
         compile project(':MetaController')
         compile project(':UserPanel')
-        
+
         testCompile group: 'junit', name: 'junit', version: '4.+'
     }
+    
+    afterEvaluate {
+        jar {
+            manifest {
+                attributes(
+                    'Main-Class': 'Gui',
+                    'Class-Path': configurations.compile.collect { File file -> file.name }.sort().join(' ')
+                )
+            }
+        }
+    }
+
 }
 
 project(':Algorithm') {

@@ -8,14 +8,8 @@ public class MetaControllerFactory {
 			metaController = new MetaController();
 		}
 
-		if (MetaControllerConfiguration.getAlgorithm().equalsIgnoreCase(
-				"shortestPath")) {
-			metaController.setAlgorithm(new ShortestPathAlgorithm());
-		} else if (MetaControllerConfiguration.getAlgorithm().equalsIgnoreCase(
-				"random")) {
-			// metaController.setAlgorithm(new RandomAlgorithm());
-		}
-
+		metaController.setAlgorithm(AlgorithmConfiguration.getAlgorithm().createInstance());
+	
 		return metaController;
 	}
 

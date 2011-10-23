@@ -91,6 +91,8 @@ public class ElevatorConfigurationReader {
 
 		IMetaController metaController = MetaControllerFactory
 				.getMetaControllerInstance();
+		
+		
 
 		IFloorPanelQueue floorPanelQueue = new FloorPanelQueue();
 
@@ -149,7 +151,6 @@ public class ElevatorConfigurationReader {
 				car.setCurrentFloorNumber(2);
 
 			UserPanelConfiguration.setSelection(lst.get(i).intValue());
-			System.out.println(lst.get(i).intValue());
 			IUserPanel userPanel = UserPanelFactory.getUserPanelInstance();
 			userPanel.setSelection(lst.get(i).intValue());
 

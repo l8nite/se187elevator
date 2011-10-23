@@ -11,7 +11,7 @@ public class GuiConfiguration {
 	private static String floorPanelPressedButtonColor = "Blue";
 	private static String floorPanelDisplay = "Symbol";
 	private static String doorPanelDisplay = "text";
-	private static String algorithmType = "Shortest Path";
+	private static AlgorithmType algorithmType = AlgorithmType.SHORTEST_PATH;
 
 	private static ArrayList<Integer> selectioArray = new ArrayList<Integer>();
 
@@ -99,11 +99,11 @@ public class GuiConfiguration {
 		GuiConfiguration.doorPanelDisplay = doorPanelDisplay;
 	}
 
-	public static String getAlgorithmType() {
+	public static AlgorithmType getAlgorithmType() {
 		return algorithmType;
 	}
 
-	public static void setAlgorithmType(String algorithmType) {
+	public static void setAlgorithmType(AlgorithmType algorithmType) {
 		GuiConfiguration.algorithmType = algorithmType;
 	}
 

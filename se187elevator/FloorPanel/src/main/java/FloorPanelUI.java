@@ -70,7 +70,6 @@ public class FloorPanelUI extends JPanel {
 	}
 
 	void disableUpButton() {
-		System.out.println("Inside DIsable");
 		UpButton.setEnabled(false);
 
 	}

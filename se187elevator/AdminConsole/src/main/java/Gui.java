@@ -228,8 +228,7 @@ public class Gui extends javax.swing.JFrame {
 
 		jLabel11.setText("Algorithm Type");
 
-		jComboBox10.setModel(new javax.swing.DefaultComboBoxModel(new String[] {
-				"Shortest Path", "Random", "Highest Floor First" }));
+		jComboBox10.setModel(new javax.swing.DefaultComboBoxModel(AlgorithmType.values()));
 		jComboBox10.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				jComboBox10ActionPerformed(evt);
@@ -529,16 +528,12 @@ public class Gui extends javax.swing.JFrame {
 	class ok implements ActionListener {
 		public void actionPerformed(ActionEvent arg0) {
 
-			System.out.println(arrCombo.size());
-
 			for (int i = 0; i < arrCombo.size(); i++) {
-				System.out.println(arrCombo.get(i).getSelectedItem());
 				String selection = (String) arrCombo.get(i).getSelectedItem();
 				if (selection.equalsIgnoreCase("Seq")) {
 					lst.add(new Integer(0));
 				}
 				if (selection.equalsIgnoreCase("Even")) {
-					System.out.println("even");
 					lst.add(new Integer(1));
 				}
 				if (selection.equalsIgnoreCase("Odd")) {
@@ -547,15 +542,6 @@ public class Gui extends javax.swing.JFrame {
 			}
 			GuiConfiguration.setSelectioArray(lst);
 			selectionFrame.setVisible(false);
-			/*
-			 * for(int j=0;j<lst.size();j++){
-			 * System.out.println(GuiConfiguration
-			 * .getSelectioArray().get(j).intValue());
-			 * 
-			 * }
-			 */
-
-			// ElevatorConfigurationReader.showElevator();
 		}
 
 	}
@@ -596,8 +582,8 @@ public class Gui extends javax.swing.JFrame {
 			String doorPnlDisplay = (String) jComboBox9.getSelectedItem();
 			GuiConfiguration.setDoorPanelDisplay(doorPnlDisplay.toString());
 
-			String algoType = (String) jComboBox10.getSelectedItem();
-			GuiConfiguration.setAlgorithmType(algoType.toString());
+			AlgorithmType algoType = (AlgorithmType) jComboBox10.getSelectedItem();
+			GuiConfiguration.setAlgorithmType(algoType);
 
 			// String userPanelType = (String)jComboBox11.getSelectedItem();
 

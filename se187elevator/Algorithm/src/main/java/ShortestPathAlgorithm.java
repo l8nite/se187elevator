@@ -16,13 +16,6 @@ public class ShortestPathAlgorithm implements IAlgorithm {
 
 		lstCars = partitionCars(lstCars, destinationFloorNumber);
 
-		for (int i = 0; i < lstCars.size(); i++) {
-			System.out.println("After Separating");
-			System.out.println("Car  is of type : " + i
-					+ lstCars.get(i).getUserPanel().getSelection());
-		}
-
-		System.out.println(lstCars.get(0).getUserPanelQueue());
 		pathLength = lstCars.get(0).getUserPanelQueue()
 				.pathLength(direction, destinationFloorNumber);
 		bestCar = lstCars.get(0);
@@ -30,8 +23,6 @@ public class ShortestPathAlgorithm implements IAlgorithm {
 		for (int i = 1; i < lstCars.size(); i++) {
 
 			ICar car = lstCars.get(i);
-
-			System.out.println("Inside loop ..." + car + " " + i);
 
 			if (pathLength < car.getUserPanelQueue().pathLength(direction,
 					destinationFloorNumber)) {
@@ -43,15 +34,12 @@ public class ShortestPathAlgorithm implements IAlgorithm {
 			}
 		}
 
-		System.out.println("-------------" + pathLength + "" + bestCar);
-		// TODO Auto-generated method stub
 		return bestCar;
 	}
 
 	// }
 	public List<ICar> partitionCars(List<ICar> lstCars,
 			int destinationFloorNumber) {
-		// TODO Auto-generated method stub
 
 		ArrayList<ICar> oddCars = new ArrayList<ICar>();
 		ArrayList<ICar> evenCars = new ArrayList<ICar>();

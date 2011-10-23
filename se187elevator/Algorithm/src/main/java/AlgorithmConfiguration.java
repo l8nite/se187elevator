@@ -1,13 +1,11 @@
 public class AlgorithmConfiguration {
+	private static AlgorithmType algorithm;
 
-	private static String algorithm = "Shortest Path";
-
-	public static String getAlgorithm() {
+	public static AlgorithmType getAlgorithm() {
 		return algorithm;
 	}
 
-	public static void setAlgorithm(String algorithm) {
+	public static void setAlgorithm(AlgorithmType algorithm) {
 		AlgorithmConfiguration.algorithm = algorithm;
 	}
-
 }

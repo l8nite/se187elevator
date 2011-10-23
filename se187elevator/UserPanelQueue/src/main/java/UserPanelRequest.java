@@ -1,13 +1,10 @@
-
 public class UserPanelRequest {
-	
+
 	private int destinationFloorNumber = 1;
-	
-	
-	
-	public UserPanelRequest(int destinationFloorNumber, ICar car){
+
+	public UserPanelRequest(int destinationFloorNumber, ICar car) {
 		this.destinationFloorNumber = destinationFloorNumber;
-		
+
 	}
 
 	public int getDestinationFloorNumber() {
@@ -18,15 +15,14 @@ public class UserPanelRequest {
 		this.destinationFloorNumber = destinationFloorNumber;
 	}
 
-		
-	//TBD - implement equals method
-	@Override
+	// TBD - implement equals method
+
 	public boolean equals(Object arg0) {
-		UserPanelRequest u = (UserPanelRequest)arg0;
-		if(destinationFloorNumber == u.destinationFloorNumber){
+		UserPanelRequest u = (UserPanelRequest) arg0;
+		if (destinationFloorNumber == u.destinationFloorNumber) {
 			return true;
 		}
-		
+
 		return false;
 	}
 }

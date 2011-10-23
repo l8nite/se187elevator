@@ -1,18 +1,17 @@
-
 public class CarConfiguration {
-	
+
 	private static String carType = "default";
-		
+
 	private static String carControllerType = "default";
-	
+
 	private static String userPanelType = "default";
-	
+
 	private static String doorType = "single";
-	
+
 	private static String doorPanelType = "default";
-	
+
 	private static String userPanelQueueType = "default";
-	
+
 	public static String getUserPanelQueueType() {
 		return userPanelQueueType;
 	}
@@ -40,7 +39,6 @@ public class CarConfiguration {
 	public static void setCarType(String carType) {
 		CarConfiguration.carType = carType;
 	}
-
 
 	public static String getCarControllerType() {
 		return carControllerType;

@@ -1,18 +1,20 @@
-
 public class AlgorithmFactory {
 
-	public static IAlgorithm getAlgorithmInstance(){
+	public static IAlgorithm getAlgorithmInstance() {
 		IAlgorithm algorithm = null;
-		
-		if(AlgorithmConfiguration.getAlgorithm().equalsIgnoreCase("shortestPath")){
+
+		if (AlgorithmConfiguration.getAlgorithm().equalsIgnoreCase(
+				"Shortest Path")) {
 			algorithm = new ShortestPathAlgorithm();
-		}else if(AlgorithmConfiguration.getAlgorithm().equalsIgnoreCase("leastTasks")){
-			algorithm = new LeastTasksAlgorithm();
-		}else if(AlgorithmConfiguration.getAlgorithm().equalsIgnoreCase("highestFloorFirst")){
-            algorithm = new HighestFloorFirstAlgorithm();
-        }
-		
+		} else if (AlgorithmConfiguration.getAlgorithm().equalsIgnoreCase(
+				"Random")) {
+			algorithm = new RandomAlgorithm();
+		} else if (AlgorithmConfiguration.getAlgorithm().equalsIgnoreCase(
+				"Highest Floor First")) {
+			algorithm = new HighestFloorFirstAlgorithm();
+		}
+
 		return algorithm;
 	}
-	
+
 }

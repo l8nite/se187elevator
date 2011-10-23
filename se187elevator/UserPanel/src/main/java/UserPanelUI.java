@@ -8,22 +8,16 @@ import javax.swing.JPanel;
 
 public class UserPanelUI extends JPanel {
 
-	private ICar car = null;
+	private static final long serialVersionUID = -4160536353525076779L;
 
-	private UserPanelColor activeButtonColor = null;
-
-	private UserPanelColor buttonColor = null;
+	private UserPanelColor buttonColor;
 
 	private List<JButton> lstUserPanelButtons = new ArrayList<JButton>();
 
 	public UserPanelUI(int numFloors, UserPanelColor buttonColor,
 			UserPanelColor activeButtonColor, ICar car) {
-		
-		System.out.println("Inside UsserPanel UI "+ car);
 
-		this.car = car;
-
-		this.activeButtonColor = activeButtonColor;
+		System.out.println("Inside UsserPanel UI " + car);
 
 		this.buttonColor = buttonColor;
 
@@ -40,28 +34,30 @@ public class UserPanelUI extends JPanel {
 
 		for (int i = 1; i <= numFloors; i++) {
 			JButton button = new JButton("" + i);
-			
+
 			System.out.println("Button Text" + button.getText());
 			System.out.println("Button Color" + buttonColor);
 			button.setBackground(buttonColor.getJColor());
-			button.addActionListener(
-					new UserPanelButtonListener(button.getText(), car, activeButtonColor));
+			button.setOpaque(true);
+			button.addActionListener(new UserPanelButtonListener(button
+					.getText(), car, activeButtonColor));
 			add(button);
 			lstUserPanelButtons.add(button);
 
 		}
 
 	}
-	
-	public void deactivateFloorButton(int floorNumber){
-		
-		for(JButton button : lstUserPanelButtons){
-			if(Integer.parseInt(button.getText()) == floorNumber){
+
+	public void deactivateFloorButton(int floorNumber) {
+
+		for (JButton button : lstUserPanelButtons) {
+			if (Integer.parseInt(button.getText()) == floorNumber) {
 				button.setBackground(buttonColor.getJColor());
+				button.setOpaque(true);
 				break;
 			}
 		}
-		
+
 	}
 
 }

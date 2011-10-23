@@ -15,7 +15,6 @@ public class DoorPanelQueue {
 
 	void putDoorPanelRequest(DoorCommand doorCommand) {
 
-		
 		if (!doorPanelRequest.contains(doorCommand)) {
 			System.out.println("Request put in queue");
 			doorPanelRequest.offer(doorCommand);
@@ -24,12 +23,11 @@ public class DoorPanelQueue {
 
 	void setCar(ICar car) {
 		this.car = car;
-		
+
 	}
 
 	private class DoorPanelQueueMonitorThread implements Runnable {
 
-		@Override
 		public void run() {
 			while (true) {
 				try {
@@ -40,7 +38,8 @@ public class DoorPanelQueue {
 				}
 				while (doorPanelRequest.size() != 0) {
 					System.out.println("Processing request");
-					car.getCarController().processDoorRequest(doorPanelRequest.pop());
+					car.getCarController().processDoorRequest(
+							doorPanelRequest.pop());
 				}
 			}
 		}

@@ -3,20 +3,19 @@ import javax.swing.JPanel;
 public class UserPanel implements IUserPanel {
 
 	private ICar car = null;
-	
+
 	private UserPanelColor buttonColor = null;
-	
+
 	private UserPanelColor activeButtonColor = null;
-	
+
 	private UserPanelUI userPanelUI = null;
-	
+
 	private UserPanelUIEven userPanelUIEven = null;
-	
+
 	private UserPanelUIOdd userPanelUIOdd = null;
-	
-	private int selection =0;
-	
-	
+
+	private int selection = 0;
+
 	public int getSelection() {
 		return selection;
 	}
@@ -44,50 +43,43 @@ public class UserPanel implements IUserPanel {
 	}
 
 	public UserPanel() {
-	
+
 	}
 
-
-	@Override
 	public JPanel createUserPanel() {
-		if (selection==0){
-			userPanelUI =  new UserPanelUI(numberFloors, buttonColor, activeButtonColor,  car);
+		if (selection == 0) {
+			userPanelUI = new UserPanelUI(numberFloors, buttonColor,
+					activeButtonColor, car);
 			return userPanelUI;
-		}
-		else if(selection==1){
-			userPanelUIEven =  new UserPanelUIEven(numberFloors, buttonColor, activeButtonColor,  car);
+		} else if (selection == 1) {
+			userPanelUIEven = new UserPanelUIEven(numberFloors, buttonColor,
+					activeButtonColor, car);
 			return userPanelUIEven;
-		}
-		else 
-			userPanelUIOdd =  new UserPanelUIOdd(numberFloors, buttonColor, activeButtonColor,  car);
-		
+		} else
+			userPanelUIOdd = new UserPanelUIOdd(numberFloors, buttonColor,
+					activeButtonColor, car);
+
 		return userPanelUIOdd;
 	}
-	
-	@Override
+
 	public void setActiveButtonColor(UserPanelColor color) {
 		this.activeButtonColor = color;
-		
+
 	}
 
-	@Override
 	public void setButtonColor(UserPanelColor color) {
 		this.buttonColor = color;
-		
+
 	}
 
-	@Override
 	public void deactivateFloorButton(int floorNumber) {
-		if (selection==0)
+		if (selection == 0)
 			userPanelUI.deactivateFloorButton(floorNumber);
-		else if (selection==1)
+		else if (selection == 1)
 			userPanelUIEven.deactivateFloorButton(floorNumber);
 		else
 			userPanelUIOdd.deactivateFloorButton(floorNumber);
-		
-	}
 
-	
-	
+	}
 
 }

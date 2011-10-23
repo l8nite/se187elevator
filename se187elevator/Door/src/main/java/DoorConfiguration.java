@@ -1,11 +1,9 @@
-
 public class DoorConfiguration {
 
-	
-	static private  String carType = "carType2";
-	
+	static private String carType = "carType2";
+
 	static private String carControllerType = "default";
-	
+
 	static private String doorType = "SingleDoor";
 
 	public static String getCarType() {
@@ -31,5 +29,5 @@ public class DoorConfiguration {
 	public static void setDoorType(String doorType) {
 		DoorConfiguration.doorType = doorType;
 	}
-	
+
 }

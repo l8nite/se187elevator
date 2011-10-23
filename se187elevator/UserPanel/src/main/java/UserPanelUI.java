@@ -9,43 +9,45 @@ import javax.swing.JPanel;
 public class UserPanelUI extends JPanel {
 
 	private static final long serialVersionUID = -4160536353525076779L;
-
 	private UserPanelColor buttonColor;
-
 	private List<JButton> lstUserPanelButtons = new ArrayList<JButton>();
-
+	public enum UserPanelType { ALL, ODD, EVEN };
+	
 	public UserPanelUI(int numFloors, UserPanelColor buttonColor,
 			UserPanelColor activeButtonColor, ICar car) {
 
-		System.out.println("Inside UsserPanel UI " + car);
+		this(numFloors, buttonColor, activeButtonColor, car, UserPanelType.ALL);
+	}
+
+	public UserPanelUI(int numFloors, UserPanelColor buttonColor,
+			UserPanelColor activeButtonColor, ICar car, UserPanelType type) {
+
+		this.initializeUI(numFloors, buttonColor, activeButtonColor, car, type);
+	}
+
+	public void initializeUI(int numFloors, UserPanelColor buttonColor,
+			UserPanelColor activeButtonColor, ICar car, UserPanelType type) {
+
+		setPreferredSize(new Dimension(200, 200));
 
 		this.buttonColor = buttonColor;
 
-		int newNumFloors = 0;
+		int gridLayoutRows = (int) Math.ceil((float) numFloors / 3.0);
+		setLayout(new GridLayout(gridLayoutRows, 3));
+		
+		int buttonNum = type == UserPanelType.EVEN ? 2 : 1;
+		int increment = type == UserPanelType.ALL ? 1 : 2;
 
-		setPreferredSize(new Dimension(200, 200));
-		if (numFloors % 3 != 0) {
-			newNumFloors = numFloors + (3 - (numFloors % 3));
-		} else {
-			newNumFloors = numFloors;
-		}
-
-		setLayout(new GridLayout(newNumFloors / 3, 3));
-
-		for (int i = 1; i <= numFloors; i++) {
-			JButton button = new JButton("" + i);
-
-			System.out.println("Button Text" + button.getText());
-			System.out.println("Button Color" + buttonColor);
+		while (buttonNum <= numFloors) {
+			JButton button = new JButton(Integer.toString(buttonNum));
 			button.setBackground(buttonColor.getJColor());
 			button.setOpaque(true);
 			button.addActionListener(new UserPanelButtonListener(button
 					.getText(), car, activeButtonColor));
 			add(button);
 			lstUserPanelButtons.add(button);
-
+			buttonNum += increment;
 		}
-
 	}
 
 	public void deactivateFloorButton(int floorNumber) {

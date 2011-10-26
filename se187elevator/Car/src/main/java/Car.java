@@ -18,7 +18,7 @@ public class Car implements ICar {
 
 	IUserPanelQueue queue = null;
 	
-	IAlarm alarm = null;
+	IAlarmSwitch alarmSwitch = null;
 
 	CarStatus status = CarStatus.IDLE;
 
@@ -58,9 +58,8 @@ public class Car implements ICar {
 	}
 
 	public JPanel createCar() {
-
 		carUI = new CarUI(currentFloorNumber, carName, door, userPanel,
-				doorPanel, alarm);
+				doorPanel, alarmSwitch);
 		return carUI;
 	}
 
@@ -87,12 +86,12 @@ public class Car implements ICar {
 		this.door = door;
 	}
 	
-	public IAlarm getAlarm() {
-		return alarm;
+	public IAlarmSwitch getAlarm() {
+		return alarmSwitch;
 	}
 	
-	public void setAlarm(IAlarm alarm) {
-		this.alarm = alarm;
+	public void setAlarmSwitch(IAlarmSwitch alarmSwitch) {
+		this.alarmSwitch = alarmSwitch;
 	}
 
 	public String getCarName() {

@@ -88,12 +88,12 @@ public class TestCar implements ICar {
 		// TODO Auto-generated method stub
 	}
 	
-	public IAlarm getAlarm() {
+	public IAlarmIndicator getAlarm() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 	
-	public void setAlarm(IAlarm arg0) {
+	public void setAlarm(IAlarmIndicator arg0) {
 		// TODO Auto-generated method stub
 	}
 

@@ -2,7 +2,7 @@ public class CarFactory {
 
 	public static ICar getCarInstance() {
 
-		ICar car = null;
+		Car car = null;
 		if (CarConfiguration.getCarType().equals("default")) {
 			car = new Car();
 		}
@@ -23,7 +23,7 @@ public class CarFactory {
 		}
 		
 		// shaun - TODO - configuration for alarm
-		car.setAlarm(new InternalAlarm());
+		car.setAlarmSwitch(new AlarmSwitch());
 
 		if (CarConfiguration.getUserPanelQueueType().equals("default")) {
 			car.setUserPanelQueue(new UserPanelQueue());

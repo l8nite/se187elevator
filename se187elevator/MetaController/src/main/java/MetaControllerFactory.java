@@ -8,8 +8,15 @@ public class MetaControllerFactory {
 			metaController = new MetaController();
 		}
 
-		metaController.setAlgorithm(AlgorithmConfiguration.getAlgorithm().createInstance());
-	
+		IAlgorithm algorithm = AlgorithmFactory
+				.MakeAlgorithm(AlgorithmConfiguration.getAlgorithm());
+
+		if (null == algorithm) {
+			System.out.println("Unable to make Algorithm instance!");
+		} else {
+			metaController.setAlgorithm(algorithm);
+		}
+
 		return metaController;
 	}
 

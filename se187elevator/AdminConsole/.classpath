@@ -2,17 +2,17 @@
 <classpath>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/test/java"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry exported="true" kind="src" path="/Shared"/>
-	<classpathentry exported="true" kind="src" path="/Interfaces"/>
-	<classpathentry exported="true" kind="src" path="/Car"/>
-	<classpathentry exported="true" kind="src" path="/Door"/>
-	<classpathentry exported="true" kind="src" path="/DoorPanel"/>
-	<classpathentry exported="true" kind="src" path="/FloorPanel"/>
-	<classpathentry exported="true" kind="src" path="/MetaController"/>
-	<classpathentry exported="true" kind="src" path="/UserPanel"/>
-	<classpathentry exported="true" kind="lib" path="/Users/shaun/.gradle/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.1.jar" sourcepath="/Users/shaun/.gradle/cache/org.hamcrest/hamcrest-core/sources/hamcrest-core-1.1-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/shaun/.gradle/cache/junit/junit/jars/junit-4.10.jar" sourcepath="/Users/shaun/.gradle/cache/junit/junit/sources/junit-4.10-sources.jar"/>
-	<classpathentry kind="src" path="/Alarm"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
 	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="src" path="/Shared" exported="true"/>
+	<classpathentry kind="src" path="/Interfaces" exported="true"/>
+	<classpathentry kind="src" path="/Alarm" exported="true"/>
+	<classpathentry kind="src" path="/Car" exported="true"/>
+	<classpathentry kind="src" path="/Door" exported="true"/>
+	<classpathentry kind="src" path="/DoorPanel" exported="true"/>
+	<classpathentry kind="src" path="/FloorPanel" exported="true"/>
+	<classpathentry kind="src" path="/MetaController" exported="true"/>
+	<classpathentry kind="src" path="/UserPanel" exported="true"/>
+	<classpathentry sourcepath="/Users/shaun/.gradle/cache/org.hamcrest/hamcrest-core/sources/hamcrest-core-1.1-sources.jar" kind="lib" path="/Users/shaun/.gradle/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.1.jar" exported="true"/>
+	<classpathentry sourcepath="/Users/shaun/.gradle/cache/junit/junit/sources/junit-4.10-sources.jar" kind="lib" path="/Users/shaun/.gradle/cache/junit/junit/jars/junit-4.10.jar" exported="true"/>
 </classpath>

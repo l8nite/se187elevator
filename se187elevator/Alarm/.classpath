@@ -5,6 +5,4 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
 	<classpathentry kind="src" path="/Shared" exported="true"/>
 	<classpathentry kind="src" path="/Interfaces" exported="true"/>
-	<classpathentry kind="src" path="/Car" exported="true"/>
-	<classpathentry kind="src" path="/Door" exported="true"/>
 </classpath>

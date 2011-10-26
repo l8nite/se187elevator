@@ -1,9 +1,9 @@
-import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MetaController implements IMetaController {
 
+	private int alarmsActive = 0;
 	private List<ICar> lstCars = new ArrayList<ICar>();
 	private List<IAlarmDisplay> lstAlarmDisplays = new ArrayList<IAlarmDisplay>();
 
@@ -19,7 +19,6 @@ public class MetaController implements IMetaController {
 				destinationFloorNumber);
 
 		car.getUserPanelQueue().putMessage(destinationFloorNumber);
-
 	}
 
 	public void registerCar(ICar car) {
@@ -34,9 +33,25 @@ public class MetaController implements IMetaController {
 		}
 	}
 
-	public void alarmSwitchActivate(ActionEvent e) {
+	public void alarmSwitchActivate(AlarmState alarmState) {
+		if (AlarmState.ON == alarmState) {
+			alarmsActive++;
+		} else {
+			alarmsActive--;
+		}
+
+		if (lstAlarmDisplays.size() <= 0) {
+			return;
+		}
+
+		if (alarmsActive > 0) {
+			alarmState = AlarmState.ON;
+		} else {
+			alarmState = AlarmState.OFF;
+		}
+
 		for (IAlarmDisplay display : lstAlarmDisplays) {
-			display.setAlarmState(display.getAlarmState().toggle());
+			display.setAlarmState(alarmState);
 		}
 	}
 }

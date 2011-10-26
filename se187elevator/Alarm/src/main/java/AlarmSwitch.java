@@ -1,6 +1,7 @@
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class AlarmSwitch implements IAlarmSwitch, IAlarmSwitchDelegate {
+public class AlarmSwitch implements IAlarmSwitch, ActionListener {
 	private AlarmState alarmState;
 	private AlarmSwitchUI alarmSwitchUI;
 	private IAlarmSwitchDelegate alarmSwitchDelegate;
@@ -12,6 +13,20 @@ public class AlarmSwitch implements IAlarmSwitch, IAlarmSwitchDelegate {
 	public AlarmSwitch(IAlarmSwitchDelegate delegate) {
 		this.alarmSwitchDelegate = delegate;
 		this.setAlarmState(AlarmState.OFF);
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		if ("alarm".equals(e.getActionCommand())) {
+			alarmState = alarmState.toggle();
+			
+			if (null != this.alarmSwitchUI) {
+				alarmSwitchUI.setAlarmState(alarmState);
+			}
+
+			if (null != alarmSwitchDelegate) {
+				alarmSwitchDelegate.alarmSwitchActivate(alarmState);
+			}
+		}
 	}
 
 	public AlarmState getAlarmState() {
@@ -36,16 +51,6 @@ public class AlarmSwitch implements IAlarmSwitch, IAlarmSwitchDelegate {
 
 	public void setAlarmSwitchUI(AlarmSwitchUI alarmSwitchUI) {
 		this.alarmSwitchUI = alarmSwitchUI;
-	}
-
-	public void alarmSwitchActivate(ActionEvent e) {
-		this.setAlarmState(this.alarmState.toggle());
-
-		System.out.println("Whoa, you clicked on it!");
-
-		if (null != alarmSwitchDelegate) {
-			alarmSwitchDelegate.alarmSwitchActivate(e);
-		}
 	}
 
 	public IAlarmSwitchDelegate getAlarmSwitchDelegate() {

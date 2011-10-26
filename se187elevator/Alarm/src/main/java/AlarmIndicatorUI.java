@@ -1,4 +1,3 @@
-import java.awt.Color;
 import java.awt.FlowLayout;
 
 import javax.swing.JLabel;
@@ -29,7 +28,7 @@ public class AlarmIndicatorUI extends JPanel {
 		if (AlarmState.OFF == alarmState) {
 			status.setBackground(null);
 		} else {
-			status.setBackground(Color.RED);
+			status.setBackground(AlarmConfiguration.getAlarmColor().getJColor());
 		}
 	}
 }

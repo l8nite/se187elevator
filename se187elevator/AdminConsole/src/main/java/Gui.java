@@ -25,8 +25,6 @@ import javax.swing.JPanel;
 public class Gui extends javax.swing.JFrame {
 	private static final long serialVersionUID = -477707134931447265L;
 
-	// private JComboBox jComboBox11;
-	// private JLabel jLabel15;
 	/** Creates new form Gui */
 	public Gui() {
 		initComponents();
@@ -63,6 +61,7 @@ public class Gui extends javax.swing.JFrame {
 		jButton2 = new javax.swing.JButton();
 		jButton3 = new javax.swing.JButton();
 		jLabel11 = new javax.swing.JLabel();
+		jLabel12 = new javax.swing.JLabel();
 
 		// jLabel15 = new javax.swing.JLabel();
 
@@ -80,7 +79,7 @@ public class Gui extends javax.swing.JFrame {
 
 		// jLabel16 = new javax.swing.JLabel();
 
-		// jComboBox11 = new javax.swing.JComboBox();
+		jComboBox11 = new javax.swing.JComboBox();
 
 		jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] {
 				"2", "3", "4", "5", "6", "7", "8", "9", "10", " " }));
@@ -228,24 +227,14 @@ public class Gui extends javax.swing.JFrame {
 
 		jLabel11.setText("Algorithm Type");
 
-		jComboBox10.setModel(new javax.swing.DefaultComboBoxModel(AlgorithmType.values()));
-		jComboBox10.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				jComboBox10ActionPerformed(evt);
-			}
-		});
+		jComboBox10.setModel(new javax.swing.DefaultComboBoxModel(AlgorithmType
+				.values()));
 
-		/*
-		 * String numCars = (String)jComboBox2.getSelectedItem(); int
-		 * numbCar=Integer.parseInt(numCars); for(int j=0;j<numbCar;j++){
-		 * JComboBox x= new JComboBox(); x.setModel(new
-		 * javax.swing.DefaultComboBoxModel(new String[] { "Current", "Even",
-		 * "Odd"})); //jComboBox11.setModel(new
-		 * javax.swing.DefaultComboBoxModel(new String[] { "Current", "Even",
-		 * "Odd"})); }
-		 */
-		// jComboBox11.setModel(new javax.swing.DefaultComboBoxModel(new
-		// String[] { "Current", "Even", "Odd"}));
+		jLabel12.setText("Alarm Color");
+
+		jComboBox11.setModel(new javax.swing.DefaultComboBoxModel(AlarmColor
+				.values()));
+
 		jMenuItem1.addActionListener(new Authors());
 
 		Authors.setBackground(java.awt.SystemColor.control);
@@ -303,6 +292,7 @@ public class Gui extends javax.swing.JFrame {
 												.addComponent(jLabel4)
 												.addComponent(jLabel3)
 												.addComponent(jLabel11)
+												.addComponent(jLabel12)
 												.addComponent(jLabel10))
 
 								.addGap(18, 18, 18)
@@ -325,9 +315,11 @@ public class Gui extends javax.swing.JFrame {
 														0,
 														javax.swing.GroupLayout.DEFAULT_SIZE,
 														Short.MAX_VALUE)
-												// .addComponent(jComboBox11, 0,
-												// javax.swing.GroupLayout.DEFAULT_SIZE,
-												// Short.MAX_VALUE)
+												.addComponent(
+														jComboBox11,
+														0,
+														javax.swing.GroupLayout.DEFAULT_SIZE,
+														Short.MAX_VALUE)
 												.addComponent(
 														jComboBox2,
 														0,
@@ -424,20 +416,6 @@ public class Gui extends javax.swing.JFrame {
 												.addComponent(jLabel5))
 								.addPreferredGap(
 										javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-								/*
-								 * .addGroup(layout.createParallelGroup(javax.swing
-								 * .GroupLayout.Alignment.BASELINE)
-								 * .addComponent(jLabel15))
-								 * .addPreferredGap(javax
-								 * .swing.LayoutStyle.ComponentPlacement
-								 * .RELATED) .addComponent(jComboBox11,
-								 * javax.swing.GroupLayout.PREFERRED_SIZE,
-								 * javax.swing.GroupLayout.DEFAULT_SIZE,
-								 * javax.swing.GroupLayout.PREFERRED_SIZE)
-								 * .addPreferredGap
-								 * (javax.swing.LayoutStyle.ComponentPlacement
-								 * .RELATED)
-								 */
 
 								.addGroup(
 										layout.createParallelGroup(
@@ -509,6 +487,17 @@ public class Gui extends javax.swing.JFrame {
 														javax.swing.GroupLayout.DEFAULT_SIZE,
 														javax.swing.GroupLayout.PREFERRED_SIZE))
 								.addPreferredGap(
+										javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+								.addGroup(
+										layout.createParallelGroup(
+												javax.swing.GroupLayout.Alignment.LEADING)
+												.addComponent(jLabel12)
+												.addComponent(
+														jComboBox11,
+														javax.swing.GroupLayout.PREFERRED_SIZE,
+														javax.swing.GroupLayout.DEFAULT_SIZE,
+														javax.swing.GroupLayout.PREFERRED_SIZE))
+								.addPreferredGap(
 										javax.swing.LayoutStyle.ComponentPlacement.RELATED,
 										34, Short.MAX_VALUE)
 								.addComponent(jButton2).addGap(29, 29, 29)));
@@ -517,10 +506,6 @@ public class Gui extends javax.swing.JFrame {
 	}// </editor-fold>
 
 	private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
-	}
-
-	private void jComboBox10ActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
 	}
 
@@ -582,25 +567,15 @@ public class Gui extends javax.swing.JFrame {
 			String doorPnlDisplay = (String) jComboBox9.getSelectedItem();
 			GuiConfiguration.setDoorPanelDisplay(doorPnlDisplay.toString());
 
-			AlgorithmType algoType = (AlgorithmType) jComboBox10.getSelectedItem();
+			AlgorithmType algoType = (AlgorithmType) jComboBox10
+					.getSelectedItem();
 			GuiConfiguration.setAlgorithmType(algoType);
 
-			// String userPanelType = (String)jComboBox11.getSelectedItem();
-
-			/*
-			 * if(userPanelType.equalsIgnoreCase("Current")){
-			 * GuiConfiguration.setUserPanelType(0); }
-			 * if(userPanelType.equalsIgnoreCase("Even")){
-			 * GuiConfiguration.setUserPanelType(1); }
-			 * if(userPanelType.equalsIgnoreCase("Odd")){
-			 * GuiConfiguration.setUserPanelType(2); }
-			 */
-			// GuiConfiguration.setSelectioArray(lst);
+			AlarmColor alarmColor = (AlarmColor) jComboBox11.getSelectedItem();
+			GuiConfiguration.setAlarmColor(alarmColor);
 
 			ElevatorConfigurationReader.showElevator();
-
 		}
-
 	}
 
 	static class Authors implements ActionListener {
@@ -648,7 +623,7 @@ public class Gui extends javax.swing.JFrame {
 	private javax.swing.JButton jButton2;
 	private javax.swing.JButton jButton3;
 	private javax.swing.JComboBox jComboBox1;
-	// private javax.swing.JComboBox jComboBox11;
+	private javax.swing.JComboBox jComboBox11;
 	private javax.swing.JComboBox jComboBox10;
 	private javax.swing.JComboBox jComboBox2;
 	private javax.swing.JComboBox jComboBox3;
@@ -661,6 +636,7 @@ public class Gui extends javax.swing.JFrame {
 	private javax.swing.JLabel jLabel1;
 	private javax.swing.JLabel jLabel10;
 	private javax.swing.JLabel jLabel11;
+	private javax.swing.JLabel jLabel12;
 	private javax.swing.JLabel jLabel2;
 	private javax.swing.JLabel jLabel3;
 	private javax.swing.JLabel jLabel4;

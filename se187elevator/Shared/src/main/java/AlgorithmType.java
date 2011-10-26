@@ -1,8 +1,8 @@
 public enum AlgorithmType {
-		SHORTEST_PATH("Shortest Path"),
-		RANDOM("Random"),
 		HIGHEST_FLOOR_FIRST("Highest Floor First"),
-		LEAST_TASKS("Least Tasks");
+		SHORTEST_PATH("Shortest Path"),
+		LEAST_TASKS("Least Tasks"),
+		RANDOM("Random");
 
 		private final String display;
 		

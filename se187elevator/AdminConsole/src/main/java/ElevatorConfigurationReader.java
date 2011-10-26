@@ -58,6 +58,10 @@ public class ElevatorConfigurationReader {
 				.setAlgorithm(GuiConfiguration.getAlgorithmType());
 		System.out.println("Setting algorithm configuration to: "
 				+ GuiConfiguration.getAlgorithmType());
+		
+		// Setting alarm configuration
+		AlarmConfiguration.setAlarmColor(GuiConfiguration.getAlarmColor());
+		System.out.println("Setting alarm color to: " + GuiConfiguration.getAlarmColor().toString());
 
 		// Setting door configuration
 		List<IDoor> lstDoors = new ArrayList<IDoor>();
@@ -91,8 +95,6 @@ public class ElevatorConfigurationReader {
 
 		IMetaController metaController = MetaControllerFactory
 				.getMetaControllerInstance();
-		
-		
 
 		IFloorPanelQueue floorPanelQueue = new FloorPanelQueue();
 

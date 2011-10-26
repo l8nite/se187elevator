@@ -12,6 +12,7 @@ public class GuiConfiguration {
 	private static String floorPanelDisplay = "Symbol";
 	private static String doorPanelDisplay = "text";
 	private static AlgorithmType algorithmType = AlgorithmType.SHORTEST_PATH;
+	private static AlarmColor alarmColor = AlarmColor.RED;
 
 	private static ArrayList<Integer> selectioArray = new ArrayList<Integer>();
 
@@ -115,4 +116,11 @@ public class GuiConfiguration {
 		return floorPanelColor;
 	}
 
+	public static AlarmColor getAlarmColor() {
+		return alarmColor;
+	}
+
+	public static void setAlarmColor(AlarmColor alarmColor) {
+		GuiConfiguration.alarmColor = alarmColor;
+	}
 }

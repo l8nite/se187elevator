@@ -35,5 +35,4 @@ public class FloorPanelConfiguration {
 	public static void setButtonColor(FloorPanelColor buttonColor) {
 		FloorPanelConfiguration.buttonColor = buttonColor;
 	}
-
 }

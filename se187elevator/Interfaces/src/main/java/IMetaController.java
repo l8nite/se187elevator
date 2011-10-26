@@ -1,5 +1,3 @@
-import java.awt.event.ActionEvent;
-
 public interface IMetaController extends IAlarmSwitchDelegate {
 
 	public void processRequest(int destinationFloorNumber, Direction direction);
@@ -9,6 +7,4 @@ public interface IMetaController extends IAlarmSwitchDelegate {
 	public void setAlgorithm(IAlgorithm algorithm);
 
 	public void registerAlarmDisplay(IAlarmDisplay alarmDisplay);
-	
-	public void alarmSwitchActivate(ActionEvent e);
 }

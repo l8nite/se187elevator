@@ -55,7 +55,9 @@ project(':AdminConsole') {
             }
         }
     }
+}
 
+project(':Alarm') {
 }
 
 project(':Algorithm') {

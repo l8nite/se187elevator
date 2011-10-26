@@ -1,4 +1,5 @@
 include 'AdminConsole'
+include 'Alarm'
 include 'Algorithm'
 include 'Car', 'CarController'
 include 'Door', 'DoorPanel'

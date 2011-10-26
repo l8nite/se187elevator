@@ -34,6 +34,7 @@ project(':AdminConsole') {
     apply plugin: 'java'
 
     dependencies {
+        compile project(':Alarm')
         compile project(':Car')
         compile project(':Door')
         compile project(':DoorPanel')

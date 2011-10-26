@@ -15,7 +15,7 @@ public class CarUI extends JPanel {
 	JTextField textStatus = null;
 
 	public CarUI(int currentFloorNumber, String carName, IDoor door,
-			IUserPanel userPanel, IDoorPanel doorPanel) {
+			IUserPanel userPanel, IDoorPanel doorPanel, IAlarm alarm) {
 
 		setBorder(BorderFactory.createLineBorder(Color.black));
 		JPanel floor = new JPanel();
@@ -74,7 +74,11 @@ public class CarUI extends JPanel {
 		gbc.gridx = 0;
 		if (doorPanel != null)
 			add(doorPanel.createDoorPanelUI(), gbc);
-
+		
+		gbc.gridy = centerRow++;
+		gbc.gridx = 0;
+		if (alarm != null)
+			add(alarm.createAlarmUI(), gbc);
 	}
 
 	public void setCurrentFloorNumber(int currentFloorNumber) {

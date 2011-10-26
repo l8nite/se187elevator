@@ -39,6 +39,9 @@ public interface ICar {
 	void setCarID(int id);
 
 	int getCarID();
+	
+	IAlarm getAlarm();
+	void setAlarm(IAlarm alarm);
 
 	String getCarType();
 }

@@ -86,7 +86,15 @@ public class TestCar implements ICar {
 
 	public void setDoorPanel(IDoorPanel arg0) {
 		// TODO Auto-generated method stub
-
+	}
+	
+	public IAlarm getAlarm() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public void setAlarm(IAlarm arg0) {
+		// TODO Auto-generated method stub
 	}
 
 	public String getCarType() {

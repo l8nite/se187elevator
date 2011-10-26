@@ -21,6 +21,9 @@ public class CarFactory {
 
 			car.setDoor(new TestDoor());
 		}
+		
+		// shaun - TODO - configuration for alarm
+		car.setAlarm(new InternalAlarm());
 
 		if (CarConfiguration.getUserPanelQueueType().equals("default")) {
 			car.setUserPanelQueue(new UserPanelQueue());

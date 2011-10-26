@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
+	<classpathentry kind="src" path="/Shared" exported="true"/>
+	<classpathentry kind="src" path="/Interfaces" exported="true"/>
+	<classpathentry kind="src" path="/Car" exported="true"/>
+	<classpathentry kind="src" path="/Door" exported="true"/>
+</classpath>

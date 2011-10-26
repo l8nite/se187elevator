@@ -2,7 +2,7 @@ public class CarFactory {
 
 	public static ICar getCarInstance() {
 
-		Car car = null;
+		ICar car = null;
 		if (CarConfiguration.getCarType().equals("default")) {
 			car = new Car();
 		}

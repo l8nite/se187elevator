@@ -86,7 +86,7 @@ public class Car implements ICar {
 		this.door = door;
 	}
 	
-	public IAlarmSwitch getAlarm() {
+	public IAlarmSwitch getAlarmSwitch() {
 		return alarmSwitch;
 	}
 	

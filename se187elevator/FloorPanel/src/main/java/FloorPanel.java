@@ -13,6 +13,7 @@ public class FloorPanel implements IFloorPanel {
 	private IFloorPanelQueue floorPanelQueue = null;
 	private String FloorPanelStatus = "idle";
 	private FloorPanelUI floorPanelUI = null;
+	private IAlarmIndicator alarmIndicator = null;
 
 	private String upText = null;
 	private String downText = null;
@@ -26,7 +27,7 @@ public class FloorPanel implements IFloorPanel {
 		System.out.println("creating new floor panel for floor "
 				+ CurrentFloorNumber);
 		floorPanelUI = new FloorPanelUI(this, color, activeButtonColor,
-				CurrentFloorNumber, upText, downText);
+				CurrentFloorNumber, upText, downText, alarmIndicator);
 		return floorPanelUI;
 	}
 
@@ -84,6 +85,14 @@ public class FloorPanel implements IFloorPanel {
 	public void setUpText(String text) {
 		this.upText = text;
 
+	}
+	
+	public IAlarmIndicator getAlarmIndicator() {
+		return alarmIndicator;
+	}
+
+	public void setAlarmIndicator(IAlarmIndicator alarmIndicator) {
+		this.alarmIndicator = alarmIndicator;
 	}
 
 	public void processedRequest(int floorNumber) {

@@ -27,7 +27,7 @@ public class FTest extends TestCase {
 
 		fpQ = new FloorPanelQueue();
 		fpUI = new FloorPanelUI(fp, FloorPanelColor.YELLOW,
-				FloorPanelColor.RED, 1, "upText", "downText");
+				FloorPanelColor.RED, 1, "upText", "downText", null);
 		// fpQ = new FloorPanelQueue();
 		// fp.lstFloorPanel.add(fp);
 		// fp.createFloorPanel(2);

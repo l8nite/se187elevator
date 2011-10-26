@@ -41,4 +41,8 @@ public interface ICar {
 	int getCarID();
 
 	String getCarType();
+
+	void setAlarmSwitch(IAlarmSwitch alarmSwitch);
+
+	IAlarmSwitch getAlarmSwitch();
 }

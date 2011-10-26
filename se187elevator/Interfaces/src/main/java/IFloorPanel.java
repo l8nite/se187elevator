@@ -36,4 +36,6 @@ public interface IFloorPanel {
 
 	void processStatusRequest(int floorNumber, int currentFloor);
 
+	void setAlarmIndicator(IAlarmIndicator alarmIndicator);
+
 }

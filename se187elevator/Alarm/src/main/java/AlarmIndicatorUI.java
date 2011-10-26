@@ -11,10 +11,6 @@ public class AlarmIndicatorUI extends JPanel {
 	private JTextField status = null;
 
 	public AlarmIndicatorUI() {
-		this(AlarmState.OFF);
-	}
-
-	public AlarmIndicatorUI(AlarmState initialState) {
 		setLayout(new FlowLayout());
 
 		JLabel label = new JLabel("Alarm");
@@ -24,14 +20,14 @@ public class AlarmIndicatorUI extends JPanel {
 		status.setEnabled(false);
 		add(status);
 
-		this.setAlarmState(initialState);
+		this.setAlarmState(AlarmState.OFF);
 	}
 
 	public void setAlarmState(AlarmState alarmState) {
 		status.setText(alarmState.toString());
 
 		if (AlarmState.OFF == alarmState) {
-			status.setBackground(Color.GREEN);
+			status.setBackground(null);
 		} else {
 			status.setBackground(Color.RED);
 		}

@@ -1,5 +1,5 @@
 import javax.swing.JPanel;
 
-public interface IAlarmIndicator {
+public interface IAlarmIndicator extends IAlarmDisplay {
 	public JPanel getAlarmIndicatorUI();
 }

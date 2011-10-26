@@ -1,6 +1,10 @@
-public class AlarmIndicator implements IAlarmIndicator, IAlarmState {
+public class AlarmIndicator implements IAlarmIndicator {
 	private AlarmState alarmState;
 	private AlarmIndicatorUI alarmIndicatorUI;
+	
+	public AlarmIndicator() {
+		this.setAlarmState(AlarmState.OFF);
+	}
 
 	public AlarmIndicatorUI getAlarmIndicatorUI() {
 		if (null == alarmIndicatorUI) {

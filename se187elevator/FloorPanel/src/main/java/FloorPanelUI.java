@@ -21,15 +21,17 @@ public class FloorPanelUI extends JPanel {
 	JTextField floorInd2 = null;
 	JTextField floorInd4 = null;
 	JTextField floorInd5 = null;
+	IAlarmIndicator alarmIndicator;
 
 	public FloorPanelUI(FloorPanel floorPanel, FloorPanelColor buttonColor,
 			FloorPanelColor activeButtonColor, int CurrentFloorNumber,
-			String upText, String downText) {
+			String upText, String downText, IAlarmIndicator alarmIndicator) {
 
 		this.currentFloorNumber = CurrentFloorNumber;
 		this.floorPanel = floorPanel;
 		this.activeButtonColor = activeButtonColor;
 		this.buttonColor = buttonColor;
+		this.alarmIndicator = alarmIndicator;
 
 		setLayout(new GridBagLayout());
 		JLabel label = new JLabel("FloorNumber " + CurrentFloorNumber);
@@ -65,8 +67,11 @@ public class FloorPanelUI extends JPanel {
 		DownButton.addActionListener(downListener);
 		add(DownButton, gbc);
 
-		// flr=new FloorIndicator();
-
+		if (null != alarmIndicator) {
+			gbc.gridy = 3;
+			gbc.gridx = 0;
+			add(alarmIndicator.getAlarmIndicatorUI(), gbc);
+		}
 	}
 
 	void disableUpButton() {

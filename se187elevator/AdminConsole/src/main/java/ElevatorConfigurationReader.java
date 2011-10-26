@@ -49,7 +49,7 @@ public class ElevatorConfigurationReader {
 				.setActiveButtonColor(resolveUserPanelColor(GuiConfiguration
 						.getUserPanelPressedButtonColor()));
 
-		// String doorpanel configuration
+		// Setting doorpanel configuration
 		DoorPanelConfiguration.setTextType(GuiConfiguration
 				.getDoorPanelDisplay());
 
@@ -104,6 +104,9 @@ public class ElevatorConfigurationReader {
 
 		for (int j = numberOfFloors; j >= 1; j--) {
 			ifloorPanel = FloorPanelFactory.createFloorPanel();
+			IAlarmIndicator alarmIndicator = AlarmIndicatorFactory.createAlarmIndicator();
+			ifloorPanel.setAlarmIndicator(alarmIndicator);
+			metaController.registerAlarmDisplay(alarmIndicator);
 			JPanel panel = ifloorPanel.createFloorPanel(j);
 			if (j == numberOfFloors)
 				ifloorPanel.disableUpButton();
@@ -149,6 +152,11 @@ public class ElevatorConfigurationReader {
 			// setting current floor number for even
 			if (lst.get(i).intValue() == 1)
 				car.setCurrentFloorNumber(2);
+			
+			IAlarmSwitch alarm = car.getAlarmSwitch();
+			if (null != alarm) {
+				alarm.setAlarmSwitchDelegate(metaController);
+			}
 
 			UserPanelConfiguration.setSelection(lst.get(i).intValue());
 			IUserPanel userPanel = UserPanelFactory.getUserPanelInstance();

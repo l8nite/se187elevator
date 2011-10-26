@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="output" path="bin"/>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/main/resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
+	<classpathentry kind="output" path="bin"/>
 	<classpathentry kind="src" path="/Shared" exported="true"/>
 	<classpathentry kind="src" path="/Interfaces" exported="true"/>
 	<classpathentry kind="src" path="/CarController" exported="true"/>
-	<classpathentry kind="lib" path="/Users/shaun/Documents/Code/se187elevator/se187elevator/External/jgoodies-forms-1.4.2.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/shaung/workspace/se187elevator/se187elevator/External/jgoodies-forms-1.4.2.jar" exported="true"/>
 </classpath>

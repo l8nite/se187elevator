@@ -13,6 +13,6 @@
 	<classpathentry kind="src" path="/FloorPanel" exported="true"/>
 	<classpathentry kind="src" path="/MetaController" exported="true"/>
 	<classpathentry kind="src" path="/UserPanel" exported="true"/>
-	<classpathentry sourcepath="/Users/shaun/.gradle/cache/org.hamcrest/hamcrest-core/sources/hamcrest-core-1.1-sources.jar" kind="lib" path="/Users/shaun/.gradle/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.1.jar" exported="true"/>
-	<classpathentry sourcepath="/Users/shaun/.gradle/cache/junit/junit/sources/junit-4.10-sources.jar" kind="lib" path="/Users/shaun/.gradle/cache/junit/junit/jars/junit-4.10.jar" exported="true"/>
+	<classpathentry sourcepath="C:/Users/shaung/.gradle/cache/junit/junit/sources/junit-4.10-sources.jar" kind="lib" path="C:/Users/shaung/.gradle/cache/junit/junit/jars/junit-4.10.jar" exported="true"/>
+	<classpathentry sourcepath="C:/Users/shaung/.gradle/cache/org.hamcrest/hamcrest-core/sources/hamcrest-core-1.1-sources.jar" kind="lib" path="C:/Users/shaung/.gradle/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.1.jar" exported="true"/>
 </classpath>

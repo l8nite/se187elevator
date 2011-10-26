@@ -107,4 +107,14 @@ public class TestCar implements ICar {
 
 	public void setCarID(int id) {
 	}
+
+	public void setAlarmSwitch(IAlarmSwitch alarmSwitch) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public IAlarmSwitch getAlarmSwitch() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
